@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>drawALine</title>
+    <style>
+        canvas {margin:100%;padding: 100%;}
+    </style>
+    <script src="build/three.js"></script>
+</head>
+<body>
+<script>
+    var scene,camera,renderer;
+    scene = new THREE.Scene();
+    camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,.1,1000);
+    renderer = new THREE.WebGLRenderer();
+
+    function animate() {
+        requestAnimationFrame(animate);
+        renderer.render(scene,camera);
+    }
+    animate();
+</script>
+</body>
+</html>
