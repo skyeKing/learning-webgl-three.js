@@ -35,7 +35,13 @@
     var line = new THREE.Line(geometry, material);
 
     scene.add(line);
-    renderer.render(scene, camera);
+    
+    function animate() {
+        requestAnimationFrame(animate);
+        renderer.render(scene, camera);
+        
+    }
+    animate();
 
 
 </script>
